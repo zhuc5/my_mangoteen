@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+
+  <title>Vite App</title>
+</head>
+
+<body>
+   <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <!-- <div class="box">
+    <div class="box1">
+    </div>
+    <div class="box2"></div>
+  </div> -->
+
+</body>
+
 </html>
+<!-- <style lang="scss">
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  /* body{
+    height:1000px;
+
+  } */
+  .box{
+    height: 100%;
+  }
+  .box1 {
+    width: 100%;
+    height: calc(100% - 200px);
+    background-color: pink;
+    border-radius: 10px;
+    /* .content1{
+        
+            margin-bottom: 0;
+        } */
+  }
+
+  .box2 {
+    position: fixed;
+    height: 200px;
+    width: 100%;
+     border-radius: 10px;
+    background-color: greenyellow;
+    left: 0;
+    bottom: 0;
+
+
+  }
+</style>
+<script>
+   function resetHeight() {
+      // reset the body height to that of the inner browser
+      document.body.style.height = window.innerHeight + "px";
+    }
+    // reset the height whenever the window's resized
+    window.addEventListener("resize", resetHeight);
+    // called to initially set the height.
+    resetHeight();
+</script> -->

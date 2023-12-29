@@ -1,0 +1,51 @@
+.wrapper {
+// 为了让 action 按钮不遮住上方的内容，这里的wrap刚好 是全屏幕-按钮的高度
+// 并且margin-bottom 刚好留 按钮的高度
+// height: calc(100vh - var(--welcome-nav-height));
+height: calc(calc(var(--vh, 1vh) * 100) - var(--welcome-nav-height));
+//   height: calc(100vh - 20vh);
+//   height: 100vh;
+  display: flex;
+  flex-direction: column;
+//   border-bottom: 10px solid black;
+// 这个padding 是自己加的 ，因为 手机浏览器中 高度会缩小，只能多加底部padding防止白色部分底部被按钮遮住
+// padding-bottom: 10vh;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--welcome-bg-start) 0%,
+    var(--welcome-bg-end) 100%
+  );
+  margin-bottom: var(--welcome-nav-height);
+
+  // 高度都用内容撑
+  > header {
+    // flex-shrink=0  意思 空间不够 就不要压缩本部分
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 66px;
+    color: #d4d4ee;
+    // &: 两者之间不能有空格，否则指的是子类的hover
+    // &:hover{
+    //     background-color: grey;
+    // }
+    // background-color: pink;
+  }
+
+  > main {
+    // 如果存在多余空间 全部给main
+    flex-grow: 1;
+    // 为了让 wrapper 和card 和main高度全部各自占满，自适应高度 要么 下一级的wrapper height100%, 要么 这里display:flex
+    display: flex;
+
+    // background-color: lightblue;
+  }
+
+  > footer {
+    flex-shrink: 0;
+    // background-color: lightgreen;
+  }
+}

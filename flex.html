@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <div class="sub1">
+            111
+        </div>
+        <div class="sub2">
+            222
+        </div>
+        <div class="sub3">
+            333
+        </div>
+    </div>
+    
+</body>
+<style>
+    .box1{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .sub1{
+        background-color: pink;
+    }
+    .sub2{
+        flex-grow: 1;
+        background-color: green;
+    }
+    .sub1,.sub3{
+         flex-shrink: 0;
+         
+    }
+  
+    .sub3{
+        background-color: blue;
+    }
+</style>
+</html>
